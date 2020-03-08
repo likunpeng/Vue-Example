@@ -1,6 +1,6 @@
 <template>
     <div>
-		<textarea>父组件的toCity</textarea>
+		<textarea class="lkp-title">父组件的toCity</textarea>
         <textarea v-model="toCity"></textarea>
         <train-city @showCityName="updateCity" :sendData="toCity"></train-city>
     </div>
@@ -24,3 +24,8 @@
     }
   }
 </script>
+<style >
+	.lkp-title {
+		color: #FF0000;
+	}
+</style>

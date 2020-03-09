@@ -10,6 +10,7 @@
 				更新时间：{{updateNow()}}
 			
 		</div>
+		<div class="static" v-bind:class="{ active : isActive}">stale绑定</div>
 		
     </div>
 </template>
@@ -22,7 +23,8 @@
     data () {
       return {
         toCity:"北京",
-		message: 'lkp'
+		message: 'lkp',
+		isActive: true
       }
     },
     methods:{

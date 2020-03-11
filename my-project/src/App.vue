@@ -4,6 +4,8 @@
     <!-- <HelloWorld :msg="message"/> -->
     <FatherComp />
     <textarea>==============================</textarea>
+	<!-- `greet` 是在下面定义的方法名 -->
+	  <button v-on:click="greet">Greet</button>
   </div>
 </template>
 
@@ -21,7 +23,17 @@ export default {
     return {
       message: "456"
     }
-  }
+  },
+   methods: {
+      greet: function (event) {
+        // `this` 在方法里指向当前 Vue 实例
+        alert('Hello ' + this.message + '!')
+        // `event` 是原生 DOM 事件
+        if (event) {
+          alert(event.target.tagName)
+        }
+      }
+    }
 }
 </script>
 
